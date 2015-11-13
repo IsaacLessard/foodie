@@ -17,6 +17,7 @@ Ability to search by sickness and see correaltion of food most often ate in corr
 Ability to search by food and see correaltion of types of sickness that occured
 recommended recipes that appear when a user has possible food allergy correlations
 recommendations for further testing( allergy skin test, etc)
+
 ##What inputs are needed to generate those outputs?
 
 journal of what they ate
@@ -27,6 +28,7 @@ algorithm for computing correlation between objects that have certain sick keywo
 way to enter daily meals and the timestamp for when they ate, and save into food journal
 way to enter sickness and the timestamps for when they felt sick
 way to create recipes that can easily be referenced, so instead of typing each ingredient they can click a meal plan to enter into their daily food journal
+
 ##What technologies do you plan to use?
 
 - javascript
@@ -34,5 +36,7 @@ way to create recipes that can easily be referenced, so instead of typing each i
 - Recipe API (https://developer.edamam.com/recipe-docs)
 - local storage
 - gulp for testing
+- 
+
 ## Feature list
 As a user, ... I want the ability to search by sickness or ingredient and get the correlation of sickness to item so I can make conscious diet decisions ... I want recommendations on 'next step' to move towards a healthy diet ... I need the ability to add food entries manually by ingredients or by a specific meal (IE ham sandwich) and when I ate ... I need the ability to add in when I get sick and symptoms ... I want to view past entries so I can plan future meal plans ... see percentages for how common certain allergies are ... autocomplete for ingredients to help avoiding having one ingredient have multiple correlation tables
