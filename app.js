@@ -58,3 +58,5 @@ console.log(JOURNAL);
 for(var key in JOURNAL){
   console.log(tableFor('cheese',JOURNAL))
 }
+
+document.body.appendChild
