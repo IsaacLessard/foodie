@@ -36,7 +36,6 @@ way to create recipes that can easily be referenced, so instead of typing each i
 - Recipe API (https://developer.edamam.com/recipe-docs)
 - local storage
 - gulp for testing
-- 
 
 ## Feature list
 As a user, ... I want the ability to search by sickness or ingredient and get the correlation of sickness to item so I can make conscious diet decisions ... I want recommendations on 'next step' to move towards a healthy diet ... I need the ability to add food entries manually by ingredients or by a specific meal (IE ham sandwich) and when I ate ... I need the ability to add in when I get sick and symptoms ... I want to view past entries so I can plan future meal plans ... see percentages for how common certain allergies are ... autocomplete for ingredients to help avoiding having one ingredient have multiple correlation tables
