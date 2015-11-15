@@ -18,7 +18,7 @@
 - recommended recipes that appear when a user has possible food allergy correlations
 - recommendations for further testing( allergy skin test, etc)
 
-#What inputs are needed to generate those outputs?
+##What inputs are needed to generate those outputs?
 
 - journal of what they ate
 - times they got sick, types of sickness
