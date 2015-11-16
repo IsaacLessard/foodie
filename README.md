@@ -1,4 +1,4 @@
-#Galvanize Individual Project Proposal
+#Galvanize First Individual Project 
 ##Project Description
 
 - This app helps users find food allergies for themselves or their children. It is a website which records everything a user eats alongside when they get sick, and then prints the correlation for the top food items that correlate with being sick. Common practice for general doctors is to tell patients to 'keep a food diary' when they complain about persisting stomach symptoms, and to write down when they get sick. This is burdensome, time consuming, and can be confusing. This app will make this process simple, and help mothers track their children as well.
