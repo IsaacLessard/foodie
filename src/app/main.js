@@ -9,27 +9,31 @@ function addEntry(reaction, foods){
     foods: foods
   });
 }
-function phi(table){
-  var correl = (table[3]*table[0]-table[2]*table[1])/
-    Math.sqrt((table[2]+table[3])*(table[0]+table[1])*
-              (table[1]+table[3])*(table[0]+table[2]))
-              *100;
-    return Math.round(correl);
+function phi(table) {
+  return (table[3] * table[0] - table[2] * table[1]) /
+    Math.sqrt((table[2] + table[3]) *
+              (table[0] + table[1]) *
+              (table[1] + table[3]) *
+              (table[0] + table[2]));
 }
 //checks journal for specific entry
 function hasFood(food, entry){
   return entry.foods.indexOf(food) !== -1;
 }
 
+function hasSymptom(sick, entry){
+    return entry.symptoms.indexOf(sick) !== -1;
+}
+
 //creates table to equate correlation
-function tableFor(food, journal){
+function tableFor(food, sick, diary){
   var table=[0,0,0,0];
-  for(var i=0;i<journal.length;i++){
-    var entry = journal[i], index=0;
+  for(var i=0;i<diary.length;i++){
+    var entry = diary[i], index=0;
     if(hasFood(food,entry)){
       index+=1;
     }
-    if(food.allergy){
+    if(hasSymptom(sick,entry)){
       index+=2;
     }
     table[index] +=1;
