@@ -1,0 +1,23 @@
+.container {
+  width: 100vw;
+}
+
+.nav {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+ul {
+  display: flex;
+}
+li {
+  list-style: none;
+}
+
+.heroImg {
+  text-align: center;
+  width: 66%;
+  margin: 0 auto;
+  height: 10em;
+}
