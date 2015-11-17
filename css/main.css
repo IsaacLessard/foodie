@@ -59,3 +59,13 @@ BUTTONS
 
 .square {
   border: 2px solid black; }
+
+/*
+=================
+ABOUT
+=================
+*/
+.circleImg {
+  width: 40vw;
+  height: 40vw;
+  border-radius: 100%; }
