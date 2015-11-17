@@ -33,6 +33,11 @@ ul {
 li {
   list-style: none; }
 
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Ubuntu', Helvetica, sans-serif; }
+
 /*
 =================
 INDEX
@@ -60,6 +65,11 @@ BUTTONS
 .square {
   border: 2px solid black; }
 
+/*
+=================
+MEDIA QUERIES
+=================
+*/
 /*
 =================
 ABOUT
