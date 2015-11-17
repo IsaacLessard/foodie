@@ -18,3 +18,12 @@ li {
   width: 66%;
   margin: 0 auto;
   height: 10em; }
+
+/*
+=================
+BUTTONS
+=================
+*/
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 0.5em; }
