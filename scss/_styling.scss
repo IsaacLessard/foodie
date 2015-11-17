@@ -1,6 +1,30 @@
+
+/*
+=================
+GRID
+=================
+*/
+
+
 .container {
   width: 100vw;
 }
+
+.row {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.col-1-3 {
+  width: 33%;
+  margin: 0 auto;
+}
+
+/*
+=================
+BASIC STYLES
+=================
+*/
 
 .nav {
   display: flex;
@@ -17,6 +41,12 @@ li {
   list-style: none;
 }
 
+/*
+=================
+INDEX
+=================
+*/
+
 .heroImg {
   text-align: center;
   width: 66%;
@@ -24,7 +54,10 @@ li {
   height: 10em;
 }
 
-
+.logIn {
+  width: 33%;
+  margin: 0 auto;
+}
 
 /*
 =================
@@ -34,4 +67,9 @@ BUTTONS
 .btn {
   text-transform: uppercase;
   letter-spacing: 0.5em;
+}
+
+.square {
+  border: 2px solid black;
+  margin: 10%;
 }
