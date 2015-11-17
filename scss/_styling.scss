@@ -54,12 +54,24 @@ body {
 INDEX
 =================
 */
+.pitch {
+  background-color: hsla(0, 100%, 60%, 0.5%);
+}
 
 .heroImg {
   text-align: center;
   width: 66%;
   margin: 0 auto;
-  height: 10em;
+  h1 {
+    font-size: 10em;
+    font-weight: 200;
+  }
+  p {
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 5em;
+  }
 }
 
 .logIn {
@@ -75,10 +87,16 @@ BUTTONS
 .btn {
   text-transform: uppercase;
   letter-spacing: 0.5em;
+  font-weight: 800;
+  font-size: 2em;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .square {
   border: 2px solid black;
+
 }
 /*
 =================

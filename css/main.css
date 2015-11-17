@@ -43,11 +43,20 @@ body {
 INDEX
 =================
 */
+.pitch {
+  background-color: rgba(255, 51, 51, 0.5); }
+
 .heroImg {
   text-align: center;
   width: 66%;
-  margin: 0 auto;
-  height: 10em; }
+  margin: 0 auto; }
+  .heroImg h1 {
+    font-size: 10em;
+    font-weight: 200; }
+  .heroImg p {
+    font-size: 4em; }
+  .heroImg h2 {
+    font-size: 5em; }
 
 .logIn {
   width: 33%;
@@ -60,7 +69,11 @@ BUTTONS
 */
 .btn {
   text-transform: uppercase;
-  letter-spacing: 0.5em; }
+  letter-spacing: 0.5em;
+  font-weight: 800;
+  font-size: 2em; }
+  .btn:hover {
+    cursor: pointer; }
 
 .square {
   border: 2px solid black; }
