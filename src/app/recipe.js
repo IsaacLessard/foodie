@@ -14,8 +14,14 @@ $(document).ready(function(){
       method: "GET",
       url: $url,
       dataType: "json",
+      success: function(data){
+        console.log(data);
+      }
     })
   }
+
+  var recipeSearch = document.getElementById('recipeSearchButton');
+  recipeSearch.addEventListener('click',search);
 
 
 
