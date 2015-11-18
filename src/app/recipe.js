@@ -19,6 +19,21 @@ $(document).ready(function(){
       dataType: "json",
       success: function(data){
         console.log(data);
+        for (j=0;j<data.results.length;j++){
+          var $source = document.createElement('li');
+          var $title = data.results[j].title;
+          var $href = data.results[j].href;
+          var $thumbnail = data.results[j].thumbnail;
+          var $ingredients = data.results[j].ingredients;
+          $source.innerHTML = "<div class='recipeShow'><h2>"
+          +$title+"</h2><a href='" 
+          + $href + "'>View Recipe</a>"
+          + "<img src='"+$thumbnail+"'>"
+          + "<p>"+$ingredients+"</p>"
+          + "</div>";
+          console.log($title);
+          document.body.appendChild($source);
+        }
       }
     })
   }

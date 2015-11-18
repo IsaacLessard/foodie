@@ -13,6 +13,7 @@ $(document).ready(function(){
     $('.logIn').removeClass('display');
   });
 
+  $('.entry').addClass('display');
 
   $('#entry').click(function(){
      console.log("clicked!");
