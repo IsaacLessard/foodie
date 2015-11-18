@@ -72,25 +72,26 @@
           <input type="input" id="recipeSearch"placeholder="'gluten free','cucumber','pasta'">
           <button type="submit" id="recipeSearchButton">Search</button>
         </fieldset>
-        <div id="displayRecipes"></div>
-        <button id="previous">Previous</button>
+        <ul id="displayRecipes"></ul>
         <button id="next">Next</button>
       </div>
 
       <div class="diary">
         <h2>This is history</h2>
         <h3>Recent Posts</h3>
-
+        <ul id="historyDisplay"></ul>
         <fieldset class="search" id="diarySearch">
           <input type="input" placeholder="'sandwich','tomato','coffee'">
           <button type="submit">Search</button>
         </fieldset>
+
       </div>
 
     </main>
     <footer>
       <script src="./src/app/recipe.js"></script>
       <script src="./src/app/main.js"></script>
+      <script src="./src/app/history.js"></script>
     </footer>
   </body>
 </html>

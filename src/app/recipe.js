@@ -2,13 +2,6 @@ $(document).ready(function(){
 
 
 
-  var listArray = [];
-  for(k=0;k<listArray.length;k++){
-    var source = document.createElement('li');
-    source.innerText = myArray[k];
-    document.body.appendChild(source);
-  }
-
   var $urlBase = "http://www.recipepuppy.com/api/?p=";
   var $pageIndex = 1;
 
