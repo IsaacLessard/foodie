@@ -18,6 +18,20 @@ $(document).ready(function(){
   //   }
   // }
 
+  $('#logIn').click(function(){
+    console.log("clicked!");
+    $('.logIn').addClass('display');
+    $('.signUp').removeClass('display');
+  });
+
+
+  $('#signUp').click(function(){
+    console.log("clicked!");
+    $('.signUp').addClass('display');
+    $('.logIn').removeClass('display');
+  });
+
+
   $('#entry').click(function(){
      console.log("clicked!");
     $('.entry').addClass('display');
