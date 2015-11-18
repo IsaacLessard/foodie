@@ -35,5 +35,4 @@ $(document).ready(function(){
     $('.entry').removeClass('display');
   });
 
-
 });

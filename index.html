@@ -51,21 +51,24 @@
           <label>Username</label>
             <input type="input" class="usernameInput" placeholder="USERNAME">
             <label>Password</label>
-            <input type="input" class="passwordInput" placeholder="PASSWORD">
+            <input type="password" class="passwordInput" placeholder="PASSWORD">
             <button type="submit" class="passwordButton">Log In</button>
         </fieldset>
 
         <fieldset class="signUp">
           <label>Email</label>
-          <input type="input" class="emailInput" placeholder="john123@gmail.com">
+          <input type="email" class="emailInput" placeholder="john123@gmail.com">
           <label>Username</label>
-          <input type="input" class="usernameInput" placeholder="Miky3232">
+          <input type="input" id="username" class="usernameInput" placeholder="Miky3232">
           <label>Password</label>
-          <input type="input" class="passwordInput" placeholder="SecretMessage">
-          <button type="submit" class="passwordButton">Sign Up</button>
+          <input type="password" id="password" class="passwordInput" placeholder="SecretMessage">
+          <button type="submit" id="signUpButton" class="passwordButton">Sign Up</button>
         </fieldset>
       </div>
       <a href="foodie.html">Foodie</a>
     </div>
+    <footer>
+      <script src="./src/app/login.js"></script>
+    </footer>
   </body>
 </html>
