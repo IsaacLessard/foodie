@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+
   var listArray = [];
   for(k=0;k<listArray.length;k++){
     var source = document.createElement('li');
@@ -8,6 +10,7 @@ $(document).ready(function(){
   }
 
   function search(){
+    console.log("search");
     var $searchTerm = document.getElementById('recipeSearch').value;
     var $url = "http://www.recipepuppy.com/api?q="+$searchTerm;
     var request = $.ajax({

@@ -10,9 +10,10 @@ function addEntry(){
   DIARY.push({
     name: $name,
     ingredients: $ingredients,
-    time: $time
   });
-  console.log(DIARY);
+  var parsed = localStorage.getItem('diary');
+  console.log(JSON.parse(parsed));
+  localStorage.setItem('diary',JSON.stringify(DIARY));
 }
 
 var foodSubmit = document.getElementById('foodSubmit');
@@ -51,11 +52,18 @@ function tableFor(food, sick, diary){
 }
 
 //test
-// addEntry(true,['cheese','sandwich','tomato']);
+//addEntry(true,['cheese','sandwich','tomato']);
 // console.log(tableFor('cheese',DIARY))
+
+// function saveData(){
+//   for(j=0;j<DIARY.length;j++){
+//   localStorage.setItem("diary"+j,JSON.stringify(DIARY[j]))
+// }
+// }
+
 
 
 
 //test print journal
-console.log(DIARY);
-  console.log(phi([76,9,4,1]))
+// console.log(DIARY);
+//   console.log(phi([76,9,4,1]))
