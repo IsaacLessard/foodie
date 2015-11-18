@@ -3,12 +3,21 @@
 var DIARY = [];
 
 //add to journal
-function addEntry(reaction, foods){
+function addEntry(){
+  var $name = document.getElementById('foodName').value;
+  var $ingredients = document.getElementById('ingredients').value.split(',');
+  var $time = document.getElementById('eatTime')
   DIARY.push({
-    allergy: reaction,
-    foods: foods
+    name: $name,
+    ingredients: $ingredients,
+    time: $time
   });
+  console.log(DIARY);
 }
+
+var foodSubmit = document.getElementById('foodSubmit');
+foodSubmit.addEventListener('click',addEntry);
+
 function phi(table) {
   return (table[3] * table[0] - table[2] * table[1]) /
     Math.sqrt((table[2] + table[3]) *
@@ -17,8 +26,8 @@ function phi(table) {
               (table[0] + table[2]));
 }
 //checks journal for specific entry
-function hasFood(food, entry){
-  return entry.foods.indexOf(food) !== -1;
+function hasFood(name, entry){
+  return entry.foods.indexOf(name) !== -1;
 }
 
 function hasSymptom(sick, entry){
@@ -42,8 +51,9 @@ function tableFor(food, sick, diary){
 }
 
 //test
-addEntry(true,['cheese','sandwich','tomato']);
-console.log(tableFor('cheese',DIARY))
+// addEntry(true,['cheese','sandwich','tomato']);
+// console.log(tableFor('cheese',DIARY))
+
 
 
 //test print journal
