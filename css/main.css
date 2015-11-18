@@ -17,6 +17,16 @@ FOODIE STYLINGS
   background-color: #d41162; }
 
 /*
+============
+COLORS
+============
+*/
+/*
+============
+FONTS
+============
+*/
+/*
 =================
 GRID
 =================
@@ -34,8 +44,23 @@ GRID
   width: 33%;
   margin: 0 auto; }
 
-.bottomJump {
-  height: 50vh; }
+.field {
+  height: 50vh;
+  border-radius: 20%;
+  font-family: "Futura";
+  background-color: rgba(166, 166, 166, 0.5); }
+
+.logIn, .signUp {
+  position: absolute;
+  top: 25vh;
+  left: 50%; }
+
+input {
+  width: 25vw;
+  height: 2em; }
+
+label {
+  margin-top: 2em; }
 
 /*
 =================
@@ -129,7 +154,7 @@ BUTTONS
   .bottomNav li {
     margin-left: 3em; }
     .bottomNav li:hover {
-      font-size: 1.5em; }
+      font-size: 1.25em; }
 
 /*
 =================
@@ -153,9 +178,29 @@ ABOUT
 =================
 */
 .circleImg {
-  width: 40vw;
-  height: 40vw;
-  border-radius: 100%; }
+  width: 35vw;
+  height: 35vw;
+  border-radius: 100%;
+  position: relative;
+  margin: 0 auto; }
+
+.pitchH2 {
+  position: absolute;
+  top: 50vh;
+  right: 45vw;
+  color: white;
+  font-family: "Permanent Marker", cursive; }
 
 .marker {
-  font-family: 'Permanent Marker', cursive; }
+  font-family: "Permanent Marker", cursive; }
+
+.blurb {
+  width: 60%; }
+
+.catchHook {
+  font-size: 4em;
+  text-align: center;
+  margin: 0;
+  padding: 0; }
+  .catchHook:hover {
+    font-size: 4.25em; }

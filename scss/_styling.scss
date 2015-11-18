@@ -22,8 +22,26 @@ GRID
   margin: 0 auto;
 }
 
-.bottomJump {
+.field {
   height: 50vh;
+  border-radius: 20%;
+  font-family: "Futura";
+  background-color: $transGrey;
+}
+
+.logIn, .signUp {
+  position: absolute;
+  top: 25vh;
+  left: 50%;
+}
+
+input {
+  width: 25vw;
+  height: 2em;
+}
+
+label {
+  margin-top: 2em;
 }
 /*
 =================
@@ -135,7 +153,7 @@ BUTTONS
   li {
     margin-left: 3em;
     &:hover {
-      font-size: 1.5em;
+      font-size: 1.25em;
     }
   }
 }

@@ -5,12 +5,36 @@ ABOUT
 */
 
 .circleImg {
-  width: 40vw;
-  height: 40vw;
+  width: 35vw;
+  height: 35vw;
   border-radius: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.pitchH2 {
+  position: absolute;
+  top: 50vh;
+  right: 45vw;
+  color: white;
+  font-family: $marker;
 }
 
 
 .marker {
-  font-family: 'Permanent Marker', cursive;
+  font-family: $marker;
+}
+
+.blurb {
+  width: 60%;
+}
+
+.catchHook {
+  font-size: 4em;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  &:hover {
+    font-size: 4.25em;
+  }
 }
