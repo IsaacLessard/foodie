@@ -4,6 +4,11 @@ ABOUT
 =================
 */
 
+.reverseColor {
+  background-color: $transGrey;
+  color: white;
+}
+
 .circleImg {
   width: 35vw;
   height: 35vw;
@@ -36,5 +41,21 @@ ABOUT
   padding: 0;
   &:hover {
     font-size: 4.25em;
+  }
+}
+
+
+.menuSwitch {
+  text-align: center;
+  font-size: 3em;
+  letter-spacing: 0.25em;
+  padding-top: 1em;
+  font-family: $round;
+}
+
+
+#entry, #recipes, #diary {
+  &:hover {
+    cursor: pointer;
   }
 }

@@ -10,6 +10,7 @@ $(document).ready(function(){
   var $historyDisplay = document.getElementById('historyDisplay');
 
   for(i=0;i<$count && i<$diary.length;i++){
+    if($diary.length > 0){
     var $entryItem = document.createElement('li');
     var $name = $diary[i].name;
     var $ingred = "";
@@ -21,5 +22,10 @@ $(document).ready(function(){
     console.log($name);
     console.log($ingred);
     $historyDisplay.appendChild($entryItem);
+  }else {
+    var $nullWord = document.createElement('li');
+    $nullWord.innerHTML = "<h3>You have no entries. Click on 'ENTRY' to create one!</h3>"
+    $historyDisplay.appendChild($nullWord);
+  }
   }
 });

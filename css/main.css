@@ -180,6 +180,10 @@ MEDIA QUERIES
 ABOUT
 =================
 */
+.reverseColor {
+  background-color: rgba(166, 166, 166, 0.5);
+  color: white; }
+
 .circleImg {
   width: 35vw;
   height: 35vw;
@@ -207,3 +211,13 @@ ABOUT
   padding: 0; }
   .catchHook:hover {
     font-size: 4.25em; }
+
+.menuSwitch {
+  text-align: center;
+  font-size: 3em;
+  letter-spacing: 0.25em;
+  padding-top: 1em;
+  font-family: "Nova Round", cursive; }
+
+#entry:hover, #recipes:hover, #diary:hover {
+  cursor: pointer; }
