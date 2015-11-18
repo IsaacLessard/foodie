@@ -6,13 +6,11 @@ var DIARY = [];
 function addEntry(){
   var $name = document.getElementById('foodName').value;
   var $ingredients = document.getElementById('ingredients').value.split(',');
-  var $time = document.getElementById('eatTime')
   DIARY.push({
     name: $name,
     ingredients: $ingredients,
   });
-  var parsed = localStorage.getItem('diary');
-  console.log(JSON.parse(parsed));
+  console.log(JSON.parse(localStorage.getItem('diary')));
   localStorage.setItem('diary',JSON.stringify(DIARY));
 }
 
