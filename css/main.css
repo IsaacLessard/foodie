@@ -80,6 +80,17 @@ BUTTONS
 
 /*
 =================
+JAVASCRIPT INTERACTIONS
+=================
+*/
+.entry, .recipes, .diary {
+  display: none; }
+
+.display {
+  display: block; }
+
+/*
+=================
 MEDIA QUERIES
 =================
 */

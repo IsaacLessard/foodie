@@ -98,6 +98,22 @@ BUTTONS
   border: 2px solid black;
 
 }
+
+/*
+=================
+JAVASCRIPT INTERACTIONS
+=================
+*/
+.entry, .recipes, .diary {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
+
+
 /*
 =================
 MEDIA QUERIES

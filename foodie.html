@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<script type="text/javascript" src="jquery-ui.min.js"></script>
-	<script src="jquery.js"></script>
+	<script type="text/javascript" src="./src/app/jquery-ui.min.js"></script>
+	<script src="./src/app/jquery.js"></script>
+  <script src="./src/app/contentRotate.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
     <title>..Fiary..</title>
   </head>
@@ -29,13 +30,56 @@
           </ul>
       </div>
     </header>
-    <main class="recipes">
-      <div id="imageArea">
+    <main>
+      <header>
+        <h2>Welcome.</h2>
+        <div class="row">
+          <button class="menuSwitch" id="entry">Entry</button>
+          <button class="menuSwitch" id="recipes">Recipes</button>
+          <button class="menuSwitch" id="diary">Diary</button>
+        </div>
+      </header>
+
+      <div class="entry">
+        <h2>This is entry</h2>
+        <h3>Add Entry</h3>
+        <fieldset class="addEntry">
+          <input type="input">
+          <input type="input">
+          <input type="input">
+          <button type="submit">Submit</button>
+        </fieldset>
+
+        <fieldset class="addSymptoms">
+          <input type="input">
+          <input type="input">
+          <input type="input">
+          <button type="submit">Submit</button>
+        </fieldset>
+      </div>
+
+      <div class="recipes">
+        <h2>This is recipes</h2>
+        <h3>Search for a recipe</h3>
+        <fieldset class="search" id="recipeSearch">
+          <input type="input" placeholder="'gluten free','cucumber','pasta'">
+          <button type="submit">Search</button>
+        </fieldset>
+      </div>
+
+      <div class="diary">
+        <h2>This is history</h2>
+        <h3>Recent Posts</h3>
+
+        <fieldset class="search" id=diarySearch>
+          <input type="input" placeholder="'sandwich','tomato','coffee'">
+          <button type="submit">Search</button>
+        </fieldset>
       </div>
 
     </main>
     <footer>
-      <script src="./src/app/contentRotate.js"></script>
+
     </footer>
   </body>
 </html>
