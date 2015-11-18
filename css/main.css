@@ -49,18 +49,26 @@ GRID
   border-radius: 20%;
   font-family: "Futura";
   background-color: rgba(166, 166, 166, 0.5); }
+  .field * {
+    display: block; }
+  .field label {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 2em;
+    font-weight: bold; }
+  .field input {
+    width: 25vw;
+    height: 3em; }
+  .field button {
+    margin: 0 auto;
+    margin-top: 1em;
+    font-size: 2em;
+    text-transform: uppercase; }
 
 .logIn, .signUp {
   position: absolute;
-  top: 25vh;
-  left: 50%; }
-
-input {
-  width: 25vw;
-  height: 2em; }
-
-label {
-  margin-top: 2em; }
+  top: 25%;
+  left: 0; }
 
 /*
 =================
@@ -120,11 +128,6 @@ INDEX
   .heroImg h2 {
     font-size: 3em;
     background-color: rgba(166, 166, 166, 0.5); }
-
-.logIn {
-  width: 33%;
-  margin: 0 auto;
-  left: 0; }
 
 /*
 =================

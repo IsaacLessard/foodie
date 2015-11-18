@@ -27,22 +27,37 @@ GRID
   border-radius: 20%;
   font-family: "Futura";
   background-color: $transGrey;
+  * {
+    display: block;
+  }
+  label {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  input {
+    width: 25vw;
+    height: 3em;
+  }
+
+  button {
+    margin: 0 auto;
+    margin-top: 1em;
+    font-size: 2em;
+    text-transform: uppercase;
+  }
 }
 
 .logIn, .signUp {
   position: absolute;
-  top: 25vh;
-  left: 50%;
+  top: 25%;
+  left: 0;
 }
 
-input {
-  width: 25vw;
-  height: 2em;
-}
 
-label {
-  margin-top: 2em;
-}
+
+
 /*
 =================
 BASIC STYLES
@@ -113,12 +128,6 @@ INDEX
     font-size: 3em;
     background-color: $transGrey;
   }
-}
-
-.logIn {
-  width: 33%;
-  margin: 0 auto;
-  left: 0;
 }
 
 /*
