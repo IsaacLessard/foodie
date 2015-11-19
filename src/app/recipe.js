@@ -42,6 +42,7 @@ $(document).ready(function(){
           console.log($title);
           $recipeLayout.appendChild($source);
           }
+          document.getElementById('next').innerText = "Load More";
         }
       })
     }
