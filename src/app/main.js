@@ -110,7 +110,9 @@ function tableFor(food, sick){
   gatherIngred();
 
 
-  var corMap = {}
+  var corMap = {};
+  var cleanLine = [];
+  var cleanArray = [];
   function corMapper() {
     for(t=0;t<symptomArray.length;t++){
       var tempArray = [];
@@ -133,15 +135,29 @@ function tableFor(food, sick){
       corMap[symptomArray[t]] = totalTemps;
     }
     console.log(corMap);
+
+    var totalLine = "";
+    for(p=0;p<symptomArray.length;p++){
+      var corName = symptomArray[p];
+      for(k=0;k<corMap[corName].length;k++){
+       totalLine += corMap[corName][k] + "<br>"
+      }
+      cleanLine.push(totalLine)
+    }
+    cleanLine.pop();
+    console.log(cleanLine);
 }
   corMapper();
+
 
   function displayCorrelations(){
       var $corsLayout = document.getElementById('allCorrelations');
       for (h=0;h<symptomArray.length;h++){
         var $corDiv = document.createElement('div');
         var corName = symptomArray[h];
-        $corDiv.innerHTML = "<h2>"+corName+"</h2><p>"+corMap[corName]+"</p>";
+        for(k=0;k<cleanLine.length;k++){
+          $corDiv.innerHTML = "<h2>"+corName+"</h2><p>"+cleanLine[k]+"</p>";
+        }
         $corsLayout.appendChild($corDiv);
       }
     }
