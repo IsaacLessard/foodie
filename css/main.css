@@ -115,6 +115,8 @@ BASIC STYLES
   justify-content: space-around; }
   .nav li {
     margin-right: 2em; }
+    .nav li:hover {
+      cursor: pointer; }
 
 ul {
   display: flex; }
