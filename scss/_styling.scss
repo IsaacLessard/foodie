@@ -22,6 +22,15 @@ GRID
   margin: 0 auto;
 }
 
+.col-2-3 {
+  width: 66%;
+  margin: 0 auto;
+  p, h2 {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
 .field {
   height: 50vh;
   border-radius: 20%;

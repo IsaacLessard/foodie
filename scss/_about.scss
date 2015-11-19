@@ -9,26 +9,22 @@ ABOUT
   color: white;
 }
 
-.circleImg {
-  width: 35vw;
-  height: 35vw;
-  border-radius: 100%;
-  position: relative;
+.heroSection {
+  width: 100%;
   margin: 0 auto;
+  text-align: center;
+}
+
+.circleImg {
+  width: 40vw;
+  height: 40vw;
+  border-radius: 100%;
 }
 
 .pitchH2 {
-  position: absolute;
-  top: 50vh;
-  right: 45vw;
-  color: white;
   font-family: $marker;
 }
 
-
-.marker {
-  font-family: $marker;
-}
 
 .blurb {
   width: 60%;

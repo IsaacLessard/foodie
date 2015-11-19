@@ -70,6 +70,13 @@ GRID
   width: 33%;
   margin: 0 auto; }
 
+.col-2-3 {
+  width: 66%;
+  margin: 0 auto; }
+  .col-2-3 p, .col-2-3 h2 {
+    margin: 0 auto;
+    text-align: center; }
+
 .field {
   height: 50vh;
   border-radius: 20%;
@@ -212,21 +219,17 @@ ABOUT
   background-color: rgba(166, 166, 166, 0.5);
   color: white; }
 
+.heroSection {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center; }
+
 .circleImg {
-  width: 35vw;
-  height: 35vw;
-  border-radius: 100%;
-  position: relative;
-  margin: 0 auto; }
+  width: 40vw;
+  height: 40vw;
+  border-radius: 100%; }
 
 .pitchH2 {
-  position: absolute;
-  top: 50vh;
-  right: 45vw;
-  color: white;
-  font-family: "Permanent Marker", cursive; }
-
-.marker {
   font-family: "Permanent Marker", cursive; }
 
 .blurb {
