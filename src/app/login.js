@@ -19,7 +19,7 @@ $(document).ready(function(){
 
   $('#aboutBtn2').click(function(){
     console.log("clicked!");
-    $('.aboutContainer').toggleClass('display');
+    $('.aboutContainer').addClass('display');
   });
 
   $('#signUp').click(function(){
