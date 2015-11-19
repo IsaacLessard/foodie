@@ -54,7 +54,7 @@ function tableFor(food, sick){
   for(var i=0;i<DIARY.length;i++){
     //checks journal for specific entry
     index=0;
-    if(DIARY[i].foods.indexOf(name) !== -1){
+    if(DIARY[i].foods.indexOf(food) !== -1){
       index+=1;
     }
     if(DIARY[i].symptoms.indexOf(sick) !== -1){
@@ -64,7 +64,7 @@ function tableFor(food, sick){
   }
   return table;
 }
-  console.log(tableFor("cheese", "headache", DIARY));
+  //console.log(tableFor("cheese", "headache", DIARY));
 
 
 

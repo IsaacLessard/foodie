@@ -3,6 +3,7 @@ $(document).ready(function(){
 
   var $historyLayout = document.getElementById('historyDisplay');
   var $diary = JSON.parse(localStorage.getItem('diary'));
+
   console.log($diary);
   console.log($diary.length);
   var $count = 10;
@@ -25,22 +26,31 @@ $(document).ready(function(){
 
 
 
-  function entryFound(){
-      var $entryItem = document.createElement('li');
-      var $name = $diary[i].name;
-      var $ingred = "";
-      for(l=0;l<$diary[i].ingredients.length;l++){
-        $ingred += ($diary[i].ingredients[l]+ ", ");
-      }
-      $entryItem.innerHTML = "<div class='journalItem'><h2>"+$name+"</h2><p>"+$ingred+"</p>"
-      $historyDisplay.appendChild($entryItem);
-  }
+  // function entryFound(){
+  //     var $entryItem = document.createElement('li');
+  //     var $name = $diary[i].name;
+  //     var $ingred = "";
+  //     for(l=0;l<$diary[i].ingredients.length;l++){
+  //       $ingred += ($diary[i].ingredients[l]+ ", ");
+  //     }
+  //     $entryItem.innerHTML = "<div class='journalItem'><h2>"+$name+"</h2><p>"+$ingred+"</p>"
+  //     $historyDisplay.appendChild($entryItem);
+  // }
+
   console.log($diary.length);
+
   function displayDiary(){
       clearHistory();
       if($diary.length > 0){
-        for(i=$diary.length;i>-1;i--){
-          entryFound();
+        for(i=$diary.length;i>=0;i= i - 1){
+          var $entryItem = document.createElement('li');
+          var $name = $diary[i].name;
+          var $ingred = "";
+          for(l=0;l<$diary[i].ingredients.length;l++){
+            $ingred += ($diary[i].ingredients[l]+ ", ");
+          }
+          $entryItem.innerHTML = "<div class='journalItem'><h2>"+$name+"</h2><p>"+$ingred+"</p>"
+          $historyDisplay.appendChild($entryItem);
           }
       } else {
         var $nullWord = document.createElement('li');
@@ -61,14 +71,15 @@ $(document).ready(function(){
       clearHistory();
       var searchDiaryItem = document.getElementById('historySearchField').value;
       for(i=0;i<$diary.length;i++){
-        for(m=0;m<$diary[i].ingredients.length;m++){
-          console.log($diary[i].ingredients[m]);
-          if($diary[i].ingredients[m] == searchDiaryItem){
-            entryFound();
-          }
-        }
         if ($diary[i].name == searchDiaryItem){
-          entryFound();
+          var $entryItem = document.createElement('li');
+          var $name = $diary[i].name;
+          var $ingred = "";
+          for(l=0;l<$diary[i].ingredients.length;l++){
+            $ingred += ($diary[i].ingredients[l]+ ", ");
+          }
+          $entryItem.innerHTML = "<div class='journalItem'><h2>"+$name+"</h2><p>"+$ingred+"</p>"
+          $historyDisplay.appendChild($entryItem);
         }
         else if ($historyLayout.innerHTML === ""){
           var $nullWord = document.createElement('li');
