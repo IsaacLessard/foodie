@@ -106,6 +106,8 @@ BASIC STYLES
   margin: 0 auto;
   flex-wrap: wrap;
   justify-content: space-around; }
+  .nav li {
+    margin-right: 2em; }
 
 ul {
   display: flex; }

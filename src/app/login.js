@@ -2,6 +2,12 @@ $(document).ready(function(){
 
   $('#logIn').click(function(){
     console.log("clicked!");
+    $('.logIn').toggleClass('display');
+    $('.signUp').removeClass('display');
+  });
+
+  $('#logIn2').click(function(){
+    console.log("clicked!");
     $('.logIn').addClass('display');
     $('.signUp').removeClass('display');
   });
@@ -9,7 +15,7 @@ $(document).ready(function(){
 
   $('#signUp').click(function(){
     console.log("clicked!");
-    $('.signUp').addClass('display');
+    $('.signUp').toggleClass('display');
     $('.logIn').removeClass('display');
   });
 
