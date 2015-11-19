@@ -55,7 +55,7 @@ function correlation(table) {
 console.log(DIARY.length);
 //creates table to equate correlation
 function tableFor(food, sick){
-  var table=[0,0,0,0];
+  var table=[1,1,1,1];
   for(i=0;i<DIARY.length;i++){
     //checks journal for specific entry
     var index=0;
@@ -71,13 +71,92 @@ function tableFor(food, sick){
 }
   console.log(tableFor("cheese", "headache", DIARY));
 
+  var symptomArray = [];
+  //creates an array of all logged symptoms
+  function gatherSymp(){
+    var sickArray = [];
+
+    var match = false;
+    for(n=0;n<DIARY.length;n++){
+      for(m=0;m<DIARY[n].symptoms.length;m++){
+        sickArray.push(DIARY[n].symptoms[m]);
+      }
+    }
+    $.each(sickArray, function(p, unique){
+        if($.inArray(unique, symptomArray) === -1) symptomArray.push(unique);
+    });
+    console.log(symptomArray);
+  }
+
+  gatherSymp();
+
+  var ingredArray = [];
+  //creates an array of all logged ingredients
+  function gatherIngred(){
+    var foodArray = [];
+
+    var match = false;
+    for(n=0;n<DIARY.length;n++){
+      for(m=0;m<DIARY[n].ingredients.length;m++){
+        foodArray.push(DIARY[n].ingredients[m].trim());
+      }
+    }
+    $.each(foodArray, function(p, unique){
+        if($.inArray(unique, ingredArray) === -1) ingredArray.push(unique);
+    });
+    console.log(ingredArray);
+  }
+
+  gatherIngred();
+
+
+  var corMap = {}
+  function corMapper() {
+    for(t=0;t<symptomArray.length;t++){
+      var tempArray = [];
+      var tempString = "";
+      for(j=0;j<ingredArray.length;j++){
+        var tempCor = correlation(tableFor(ingredArray[j], symptomArray[t], DIARY));
+        if(tempCor > 0.5){
+          tempString = "High correlation"
+        }
+        else if (tempCor > 0){
+          tempString = "Medium correlation"
+        }
+        else if (tempCor < 0){
+          tempString = "Low correlation"
+        }
+        var stringCor = (ingredArray[j] + " has " + tempString);
+        tempArray.push(stringCor);
+      }
+      var totalTemps = tempArray
+      corMap[symptomArray[t]] = totalTemps;
+    }
+    console.log(corMap);
+}
+  corMapper();
+
+  //
+  //
+  // function allCors(){
+  //   gatherSymp();
+  //   for(k=0;k<symptomArray.length;k++){
+  //     for(r=0;r<DIARY.length;r++){
+  //       for(w=0;w<DIARY[r].ingredients.length;)
+  //     }
+  //   }
+  // }
+  // allCors();
+
+  console.log(correlation(tableFor("cheese", "headache", DIARY)));
+
 
 
   var corDisplay = document.getElementById('corDisplay');
 
   // function addCorrelation(){
   //   for()
-  //   var $corItem = document.createElement('li')
+  //
   // }
 
 
