@@ -56,10 +56,13 @@ $(document).ready(function(){
    if (
      $usernameInput == $login.username && $passwordInput == $login.password
    ){
-     console.log("Logged In!");
      window.location.href = "foodie.html";
    } else {
      console.log("Not logged in");
+     var $notLogged = document.createElement('h3');
+     $notLogged.innerText = "Did not recognize username or password";
+     var $notLaylout = document.getElementById('appendNotLog');
+     $notLaylout.appendChild($notLogged);
    }
   }
 
