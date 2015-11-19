@@ -19,10 +19,11 @@ function saveDiary(){
 function addEntry(){
   var $name = document.getElementById('foodName').value;
   var $ingredients = document.getElementById('ingredients').value.split(',');
+  var $symptoms = document.getElementById('initialSick').value.split(',');
   DIARY.push({
     name: $name,
     ingredients: $ingredients,
-    symptoms
+    symptoms: $symptoms
   });
   saveDiary();
   setDiary();
@@ -30,7 +31,7 @@ function addEntry(){
 }
 
 function addSickness(){
-  var $symptoms = document.getElementById('sickName').value.split(',');
+  $symptoms = document.getElementById('sickName').value.split(',');
   var $length = DIARY.length - 1;
   DIARY[$length].symptoms = $symptoms;
   saveDiary();
