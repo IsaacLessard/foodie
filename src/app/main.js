@@ -4,7 +4,7 @@ $(document).ready(function(){
 // Food Journal and Functions
 DIARY = JSON.parse(localStorage.getItem('diary'));
 //downloads saved local storage to repopulate diary
-//console.log(DIARY);
+console.log(DIARY);
 
 //functions for working with local storage
 function setDiary(){
@@ -21,7 +21,8 @@ function addEntry(){
   var $ingredients = document.getElementById('ingredients').value.split(',');
   DIARY.push({
     name: $name,
-    ingredients: $ingredients
+    ingredients: $ingredients,
+    symptoms
   });
   saveDiary();
   setDiary();
@@ -50,13 +51,14 @@ function correlation(table) {
               (table[1] + table[3]) * (table[0] + table[2]));
 }
 
+console.log(DIARY.length);
 //creates table to equate correlation
 function tableFor(food, sick){
   var table=[0,0,0,0];
-  for(var i=0;i<DIARY.length;i++){
+  for(i=0;i<DIARY.length;i++){
     //checks journal for specific entry
-    index=0;
-    if(DIARY[i].foods.indexOf(food) !== -1){
+    var index=0;
+    if(DIARY[i].ingredients.indexOf(food) !== -1){
       index+=1;
     }
     if(DIARY[i].symptoms.indexOf(sick) !== -1){
@@ -66,7 +68,7 @@ function tableFor(food, sick){
   }
   return table;
 }
-  //console.log(tableFor("cheese", "headache", DIARY));
+  console.log(tableFor("cheese", "headache", DIARY));
 
 
 

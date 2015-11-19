@@ -4,8 +4,8 @@ $(document).ready(function(){
     var $historyLayout = document.getElementById('historyDisplay');
     var $diary = JSON.parse(localStorage.getItem('diary'));
 
-    console.log($diary);
-    console.log($diary.length);
+    //console.log($diary);
+    //console.log($diary.length);
     var $count = 10;
 
     var $historyDisplay = document.getElementById('historyDisplay');
@@ -37,7 +37,7 @@ $(document).ready(function(){
         $historyDisplay.appendChild($entryItem);
     }
 
-    console.log($diary.length);
+    //console.log($diary.length);
 
     function displayDiary(){
         clearHistory();
@@ -73,19 +73,6 @@ $(document).ready(function(){
       }
 
       //CONTENT ROTATE
-
-      $('#logIn').click(function(){
-        console.log("clicked!");
-        $('.logIn').addClass('display');
-        $('.signUp').removeClass('display');
-      });
-
-
-      $('#signUp').click(function(){
-        console.log("clicked!");
-        $('.signUp').addClass('display');
-        $('.logIn').removeClass('display');
-      });
 
       $('.entry').addClass('display');
 
