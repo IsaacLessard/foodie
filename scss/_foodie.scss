@@ -8,7 +8,9 @@ FOODIE STYLINGS
 .menuSwitch {
   width: 33%;
   height:3em;
-
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 #entry {
@@ -54,3 +56,6 @@ FOODIE STYLINGS
   width: 5em;
 
 }
+
+
+.

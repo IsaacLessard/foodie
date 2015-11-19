@@ -28,19 +28,31 @@ $(document).ready(function(){
         var $entryItem = document.createElement('li');
         var $name = $diary[i].name;
         var $ingred = "";
+        var $sicks = "";
         for(l=0;l<$diary[i].ingredients.length;l++){
+          if(l< ($diary[i].ingredients.length - 1)){
           $ingred += ($diary[i].ingredients[l]+ ", ");
+        } else {
+          $ingred += $diary[i].ingredients[l];
         }
-        $entryItem.innerHTML = "<div class='journalItem'><h2>"+$name+"</h2><p>"+$ingred+"</p>"
+        }
+        for(b=0;b<$diary[i].symptoms.length;b++){
+          if(b< ($diary[i].symptoms.length - 1)){
+          $sicks += ($diary[i].symptoms[b]+ ", ");
+        } else {
+          $sicks += $diary[i].symptoms[b];
+        }
+        $entryItem.innerHTML = "<div class='journalItem'><h3>Entry "+ i +"</h3><h2>"+$name+"</h2><p>"+$ingred+"</p>"+"<h3>Symptoms</h3><p>"+$sicks+"</p>";
         $historyLayout.appendChild($entryItem);
-    }
+        }
+      }
 
-    //console.log($diary.length);
+    console.log($diary.length);
 
     function displayDiary(){
-        clearHistory();
+      clearHistory();
         if($diary.length > 0){
-          for(i=$diary.length - 1;i>=0;i= i - 1){
+          for(i=0;i<$diary.length;i++){
             entryFound();
             }
         } else if($diary.length < 1){
@@ -52,6 +64,9 @@ $(document).ready(function(){
 
       var historySearchBtn = document.getElementById('historySearchBtn');
       historySearchBtn.addEventListener('click', historySearch);
+
+      var displayHistoryBtn = document.getElementById('histShow');
+      displayHistoryBtn.addEventListener('click', displayDiary);
 
 
 
@@ -90,10 +105,10 @@ $(document).ready(function(){
 
       $('#diary').click(function(){
         console.log("clicked!");
-        displayDiary();
         $('.diary').addClass('display');
         $('.recipes').removeClass('display');
         $('.entry').removeClass('display');
       });
+
 
 });
