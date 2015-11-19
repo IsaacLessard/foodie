@@ -76,10 +76,12 @@ function tableFor(food, sick){
   function gatherSymp(){
     var sickArray = [];
 
-    var match = false;
+    // var match = false;
     for(n=0;n<DIARY.length;n++){
       for(m=0;m<DIARY[n].symptoms.length;m++){
+        if(DIARY[n].symptoms[m] !== ""){
         sickArray.push(DIARY[n].symptoms[m]);
+        }
       }
     }
     $.each(sickArray, function(p, unique){
@@ -153,7 +155,7 @@ function tableFor(food, sick){
 
   function displayCorrelations(){
       var $corsLayout = document.getElementById('allCorrelations');
-      for (h=0;h<symptomArray.length-1;h++){
+      for (h=0;h<symptomArray.length;h++){
         var $corDiv = document.createElement('div');
         var corName = symptomArray[h];
         $corDiv.innerHTML = "<h2>"+corName+"</h2><p>"+cleanLine[h]+"</p>";
