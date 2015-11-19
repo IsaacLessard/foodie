@@ -137,8 +137,6 @@ function tableFor(food, sick){
       corMap[symptomArray[t]] = totalTemps;
     }
     console.log(corMap);
-
-
     for(p=0;p<symptomArray.length;p++){
       var totalLine = "";
       var corName = symptomArray[p];
@@ -147,7 +145,6 @@ function tableFor(food, sick){
       }
       cleanLine.push(totalLine)
     }
-    cleanLine.pop();
     console.log(cleanLine);
 }
   corMapper();
