@@ -12,6 +12,15 @@ $(document).ready(function(){
     $('.signUp').removeClass('display');
   });
 
+  $('#aboutBtn').click(function(){
+    console.log("clicked!");
+    $('.aboutContainer').toggleClass('display');
+  });
+
+  $('#aboutBtn2').click(function(){
+    console.log("clicked!");
+    $('.aboutContainer').toggleClass('display');
+  });
 
   $('#signUp').click(function(){
     console.log("clicked!");
