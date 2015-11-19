@@ -2,28 +2,43 @@
 // Food Journal and Functions
 var DIARY = [];
 
-//add to journal
+//add to diary
 function addEntry(){
   var $name = document.getElementById('foodName').value;
   var $ingredients = document.getElementById('ingredients').value.split(',');
   DIARY.push({
     name: $name,
-    ingredients: $ingredients,
+    ingredients: $ingredients
   });
+  saveDiary();
   console.log(JSON.parse(localStorage.getItem('diary')));
+}
+
+function addSickness(){
+  var $symptoms = document.getElementById('sickName').value.split(',');
+  DIARY.symptoms = $symptoms;
+  saveDiary();
+  console.log(localStorage.getItem('diary'));
+}
+
+// save to local storage
+function saveDiary(){
   localStorage.setItem('diary',JSON.stringify(DIARY));
 }
 
+//event listeners for form submission
 var foodSubmit = document.getElementById('foodSubmit');
-foodSubmit.addEventListener('click',addEntry);
+foodSubmit.addEventListener('click', addEntry);
+var symSubmit = document.getElementById('sickSubmit');
+symSubmit.addEventListener('click', addSickness);
 
-function phi(table) {
+//correlation algorithm
+function correlation(table) {
   return (table[3] * table[0] - table[2] * table[1]) /
-    Math.sqrt((table[2] + table[3]) *
-              (table[0] + table[1]) *
-              (table[1] + table[3]) *
-              (table[0] + table[2]));
+    Math.sqrt((table[2] + table[3]) * (table[0] + table[1]) *
+              (table[1] + table[3]) * (table[0] + table[2]));
 }
+
 //checks journal for specific entry
 function hasFood(name, entry){
   return entry.foods.indexOf(name) !== -1;
@@ -64,4 +79,4 @@ function tableFor(food, sick, diary){
 
 //test print journal
 // console.log(DIARY);
-//   console.log(phi([76,9,4,1]))
+//   console.log(correlation([76,9,4,1]))
