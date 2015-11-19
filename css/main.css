@@ -6,6 +6,8 @@ FOODIE STYLINGS
 .menuSwitch {
   width: 33%;
   height: 3em; }
+  .menuSwitch:hover {
+    cursor: pointer; }
 
 #entry {
   background-color: #4dcbb6; }
