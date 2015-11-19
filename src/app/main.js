@@ -2,15 +2,13 @@ $(document).ready(function(){
 
 
 // Food Journal and Functions
-var DIARY = [];
-
+DIARY = JSON.parse(localStorage.getItem('diary'));
 //downloads saved local storage to repopulate diary
-setDiary();
-
+//console.log(DIARY);
 
 //functions for working with local storage
 function setDiary(){
-  var DIARY = JSON.parse(localStorage.getItem('diary'));
+  DIARY = JSON.parse(localStorage.getItem('diary'));
 }
 
 function saveDiary(){
@@ -50,30 +48,37 @@ function correlation(table) {
               (table[1] + table[3]) * (table[0] + table[2]));
 }
 
-//checks journal for specific entry
-function hasFood(name, entry){
-  return entry.foods.indexOf(name) !== -1;
-}
-
-function hasSymptom(sick, entry){
-    return entry.symptoms.indexOf(sick) !== -1;
-}
-
 //creates table to equate correlation
-function tableFor(food, sick, diary){
+function tableFor(food, sick){
   var table=[0,0,0,0];
-  for(var i=0;i<diary.length;i++){
-    var entry = diary[i], index=0;
-    if(hasFood(food,entry)){
+  for(var i=0;i<DIARY.length;i++){
+    //checks journal for specific entry
+    index=0;
+    if(DIARY[i].foods.indexOf(name) !== -1){
       index+=1;
     }
-    if(hasSymptom(sick,entry)){
+    if(DIARY[i].symptoms.indexOf(sick) !== -1){
       index+=2;
     }
     table[index] +=1;
   }
   return table;
 }
+  console.log(tableFor("cheese", "headache", DIARY));
+
+
+
+  var corDisplay = document.getElementById('corDisplay');
+
+  // function addCorrelation(){
+  //   for()
+  //   var $corItem = document.createElement('li')
+  // }
+
+
+
+
+
 //
 // function displayCorrelations({
 //   for(n=0;n<DIARY.length;n++){

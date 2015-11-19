@@ -8,6 +8,9 @@ $(document).ready(function(){
       password: $password
     }
     localStorage.setItem('user',JSON.stringify($user));
+    //creates new diary
+    var DIARY = [];
+    localStorage.setItem('diary',JSON.stringify(DIARY));
   }
 
   var userSet = document.getElementById('signUpButton');
