@@ -1,7 +1,9 @@
+$(document).ready(function(){
+
 
 // Food Journal and Functions
 var DIARY = [];
-
+var DIARY = JSON.parse(localStorage.getItem('diary'));
 //add to diary
 function addEntry(){
   var $name = document.getElementById('foodName').value;
@@ -63,6 +65,13 @@ function tableFor(food, sick, diary){
   }
   return table;
 }
+//
+// function displayCorrelations({
+//   for(n=0;n<DIARY.length;n++){
+//     var corList = document.getElementById('')
+//   }
+// })
+
 
 //test
 //addEntry(true,['cheese','sandwich','tomato']);
@@ -80,3 +89,6 @@ function tableFor(food, sick, diary){
 //test print journal
 // console.log(DIARY);
 //   console.log(correlation([76,9,4,1]))
+
+
+});
