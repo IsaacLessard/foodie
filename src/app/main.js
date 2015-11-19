@@ -136,6 +136,18 @@ function tableFor(food, sick){
 }
   corMapper();
 
+  function displayCorrelations(){
+      var $corsLayout = document.getElementById('allCorrelations');
+      for (h=0;h<symptomArray.length;h++){
+        var $corDiv = document.createElement('div');
+        var corName = symptomArray[h];
+        $corDiv.innerHTML = "<h2>"+corName+"</h2><p>"+corMap[corName]+"</p>";
+        $corsLayout.appendChild($corDiv);
+      }
+    }
+
+  displayCorrelations();
+
   //
   //
   // function allCors(){
@@ -164,7 +176,7 @@ function tableFor(food, sick){
 
 
 //
-// function displayCorrelations({
+// functioions({
 //   for(n=0;n<DIARY.length;n++){
 //     var corList = document.getElementById('')
 //   }
