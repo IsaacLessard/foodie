@@ -2,6 +2,8 @@ $(document).ready(function(){
 
   // IN THIS CODE, ALL SINGLE LETTERS REPRESENT A COUNTER/INDEX
 
+
+  //LOG IN AND SIGN UP CLICK EVENTS
   $('#logIn').click(function(){
     console.log("clicked!");
     $('.logIn').toggleClass('display');
@@ -30,6 +32,8 @@ $(document).ready(function(){
     $('.logIn').removeClass('display');
   });
 
+
+  // saves log in data as a new user
   function setLogin(){
     var $username = document.getElementById('username').value;
     var $password = document.getElementById('password').value;
@@ -43,9 +47,11 @@ $(document).ready(function(){
     localStorage.setItem('diary',JSON.stringify(DIARY));
   }
 
+  //click event for signing up
   var userSet = document.getElementById('signUpButton');
   userSet.addEventListener('click',setLogin);
 
+  // logs user in if correct data is presented
   function logIn(){
     var $login = JSON.parse(localStorage.getItem('user'));
     console.log($login);
@@ -68,6 +74,7 @@ $(document).ready(function(){
    }
   }
 
+  //click event
   var logUserIn = document.getElementById('logInButton');
   logUserIn.addEventListener('click',logIn);
 

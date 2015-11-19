@@ -51,6 +51,7 @@ $(document).ready(function(){
 
     console.log($diary.length);
 
+    //shows all entries of diary. For demonstration purposes, no limit is placed on how much is displayed
     function displayDiary(){
       clearHistory();
         if($diary.length > 0){
@@ -71,7 +72,7 @@ $(document).ready(function(){
       displayHistoryBtn.addEventListener('click', displayDiary);
 
 
-
+      // searches diary for food name
       function historySearch(){
         clearHistory();
         var searchDiaryItem = document.getElementById('historySearchField').value;
@@ -87,7 +88,7 @@ $(document).ready(function(){
         }
       }
 
-      //CONTENT ROTATE
+      //displays and hides content in correlation to chosen item
 
       $('.entry').addClass('display');
 
