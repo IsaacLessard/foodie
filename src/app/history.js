@@ -16,8 +16,8 @@ $(document).ready(function(){
   function setDiary(){
     var DIARY = JSON.parse(localStorage.getItem('diary'));
   }
-  // creates var DIARY if missing
-  //setDiary();
+  //creates var DIARY if missing
+  setDiary();
 
   function saveDiary(){
     localStorage.setItem('diary',JSON.stringify(DIARY));

@@ -17,9 +17,6 @@ function saveDiary(){
   localStorage.setItem('diary',JSON.stringify(DIARY));
 }
 
-//creates diary element if missing
-saveDiary();
-
 //add to diary
 function addEntry(){
   var $name = document.getElementById('foodName').value;
