@@ -16,17 +16,22 @@ FOODIE STYLINGS
 #diary {
   background-color: #d41162; }
 
-.recipeShow {
-  padding: 1em;
-  width: 15vw;
+.allRecipes {
+  width: 80vw; }
+
+.recipeItems {
   display: flex;
   flex-wrap: wrap; }
+
+.recipeShow {
+  padding: 1em;
+  width: 10vw; }
   .recipeShow img {
     width: 100%; }
 
 .journalItem {
   padding-left: 1em;
-  width: 15vw; }
+  width: 20%; }
 
 .nextBtn {
   font-size: 2em;

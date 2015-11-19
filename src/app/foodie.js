@@ -8,8 +8,6 @@ $(document).ready(function(){
     //console.log($diary.length);
     var $count = 10;
 
-    var $historyDisplay = document.getElementById('historyDisplay');
-
     function clearHistory(){
       $historyLayout.innerHTML = "";
     }
@@ -34,7 +32,7 @@ $(document).ready(function(){
           $ingred += ($diary[i].ingredients[l]+ ", ");
         }
         $entryItem.innerHTML = "<div class='journalItem'><h2>"+$name+"</h2><p>"+$ingred+"</p>"
-        $historyDisplay.appendChild($entryItem);
+        $historyLayout.appendChild($entryItem);
     }
 
     //console.log($diary.length);
@@ -48,7 +46,7 @@ $(document).ready(function(){
         } else if($diary.length < 1){
           var $nullWord = document.createElement('li');
           $nullWord.innerHTML = "<h3>You have no entries. Click on 'ENTRY' to create one!</h3>"
-          $historyDisplay.appendChild($nullWord);
+          $historyLayout.appendChild($nullWord);
         }
       }
 
@@ -67,7 +65,7 @@ $(document).ready(function(){
           else if ($historyLayout.innerHTML === ""){
             var $nullWord = document.createElement('li');
             $nullWord.innerHTML = "<h3>No entries found.</h3>"
-            $historyDisplay.appendChild($nullWord);
+            $historyLayout.appendChild($nullWord);
           }
         }
       }

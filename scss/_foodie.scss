@@ -23,12 +23,18 @@ FOODIE STYLINGS
   background-color: hsla(335, 85%, 45%, 1);
 }
 
-.recipeShow {
-  padding: 1em;
-  width: 15vw;
+.allRecipes {
+  width: 80vw;
+}
+
+.recipeItems {
   display: flex;
   flex-wrap: wrap;
+}
 
+.recipeShow {
+  padding: 1em;
+  width: 10vw;
   img {
     width: 100%;
   }
@@ -37,7 +43,7 @@ FOODIE STYLINGS
 
 .journalItem {
   padding-left: 1em;
-  width: 15vw;
+  width: 20%;
 }
 
 .nextBtn {
