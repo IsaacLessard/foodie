@@ -1,12 +1,11 @@
 $(document).ready(function(){
 
+
   var $historyLayout = document.getElementById('historyDisplay');
   var $diary = JSON.parse(localStorage.getItem('diary'));
   console.log($diary);
   console.log($diary.length);
   var $count = 10;
-
-  console.log($diary[0].name)
 
   var $historyDisplay = document.getElementById('historyDisplay');
 
@@ -14,21 +13,35 @@ $(document).ready(function(){
     $historyLayout.innerHTML = "";
   }
 
+  function setDiary(){
+    var DIARY = JSON.parse(localStorage.getItem('diary'));
+  }
+  // creates var DIARY if missing
+  //setDiary();
+
+  function saveDiary(){
+    localStorage.setItem('diary',JSON.stringify(DIARY));
+  }
+
+
+
+  function entryFound(){
+      var $entryItem = document.createElement('li');
+      var $name = $diary[i].name;
+      var $ingred = "";
+      for(l=0;l<$diary[i].ingredients.length;l++){
+        $ingred += ($diary[i].ingredients[l]+ ", ");
+      }
+      $entryItem.innerHTML = "<div class='journalItem'><h2>"+$name+"</h2><p>"+$ingred+"</p>"
+      $historyDisplay.appendChild($entryItem);
+  }
+  console.log($diary.length);
   function displayDiary(){
       clearHistory();
       if($diary.length > 0){
-        for(i=0;i<$count && i<$diary.length;i++){
-          var $entryItem = document.createElement('li');
-          var $name = $diary[i].name;
-          var $ingred = "";
-          for(l=0;l<$diary[i].ingredients.length;l++){
-            $ingred += ($diary[i].ingredients[l]+ ", ");
+        for(i=$diary.length;i>-1;i--){
+          entryFound();
           }
-          $entryItem.innerHTML = "<div class='journalItem'><h2>"+$name+"</h2><p>"+$ingred+"</p>"
-          console.log($name);
-          console.log($ingred);
-          $historyDisplay.appendChild($entryItem);
-        }
       } else {
         var $nullWord = document.createElement('li');
         $nullWord.innerHTML = "<h3>You have no entries. Click on 'ENTRY' to create one!</h3>"
@@ -38,4 +51,30 @@ $(document).ready(function(){
 
     var allDiary = document.getElementById('diary');
     allDiary.addEventListener('click', displayDiary);
+
+    var historySearchBtn = document.getElementById('historySearchBtn');
+    historySearchBtn.addEventListener('click', historySearch);
+
+
+
+    function historySearch(){
+      clearHistory();
+      var searchDiaryItem = document.getElementById('historySearchField').value;
+      for(i=0;i<$diary.length;i++){
+        for(m=0;m<$diary[i].ingredients.length;m++){
+          console.log($diary[i].ingredients[m]);
+          if($diary[i].ingredients[m] == searchDiaryItem){
+            entryFound();
+          }
+        }
+        if ($diary[i].name == searchDiaryItem){
+          entryFound();
+        }
+        else if ($historyLayout.innerHTML === ""){
+          var $nullWord = document.createElement('li');
+          $nullWord.innerHTML = "<h3>No entries found.</h3>"
+          $historyDisplay.appendChild($nullWord);
+        }
+      }
+    }
 });

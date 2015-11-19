@@ -3,7 +3,23 @@ $(document).ready(function(){
 
 // Food Journal and Functions
 var DIARY = [];
-var DIARY = JSON.parse(localStorage.getItem('diary'));
+
+//downloads saved local storage to repopulate diary
+setDiary();
+
+
+//functions for working with local storage
+function setDiary(){
+  var DIARY = JSON.parse(localStorage.getItem('diary'));
+}
+
+function saveDiary(){
+  localStorage.setItem('diary',JSON.stringify(DIARY));
+}
+
+//creates diary element if missing
+saveDiary();
+
 //add to diary
 function addEntry(){
   var $name = document.getElementById('foodName').value;
@@ -18,14 +34,10 @@ function addEntry(){
 
 function addSickness(){
   var $symptoms = document.getElementById('sickName').value.split(',');
-  DIARY.symptoms = $symptoms;
+  var $length = DIARY.length - 1;
+  DIARY[$length].symptoms = $symptoms;
   saveDiary();
   console.log(localStorage.getItem('diary'));
-}
-
-// save to local storage
-function saveDiary(){
-  localStorage.setItem('diary',JSON.stringify(DIARY));
 }
 
 //event listeners for form submission

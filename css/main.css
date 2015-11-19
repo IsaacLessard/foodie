@@ -19,6 +19,12 @@ FOODIE STYLINGS
 .recipeShow {
   padding: 1em;
   width: 15vw; }
+  .recipeShow img {
+    width: 100%; }
+
+.journalItem {
+  padding: 1em;
+  width: 15vw; }
 
 .nextBtn {
   font-size: 2em;
