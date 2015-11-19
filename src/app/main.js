@@ -1,16 +1,22 @@
 $(document).ready(function(){
 
 
+// IN THIS CODE, ALL SINGLE LETTERS REPRESENT A COUNTER/INDEX
+
 // Food Journal and Functions
 DIARY = JSON.parse(localStorage.getItem('diary'));
 //downloads saved local storage to repopulate diary
-console.log(DIARY);
+//console.log(DIARY);
 
 //functions for working with local storage
+
+//pulls down local storage data to save to DIARY if needed
 function setDiary(){
   DIARY = JSON.parse(localStorage.getItem('diary'));
 }
 
+
+// sets local storage item
 function saveDiary(){
   localStorage.setItem('diary',JSON.stringify(DIARY));
 }
@@ -27,16 +33,17 @@ function addEntry(){
   });
   saveDiary();
   setDiary();
-  console.log(JSON.parse(localStorage.getItem('diary')));
+  //console.log(JSON.parse(localStorage.getItem('diary')));
 }
 
+//adds symptom to most recent diary entry
 function addSickness(){
   $symptoms = document.getElementById('sickName').value.split(',');
   var $length = DIARY.length - 1;
   DIARY[$length].symptoms = $symptoms;
   saveDiary();
   setDiary();
-  console.log(localStorage.getItem('diary'));
+  //console.log(localStorage.getItem('diary'));
 }
 
 //event listeners for form submission
@@ -52,7 +59,7 @@ function correlation(table) {
               (table[1] + table[3]) * (table[0] + table[2]));
 }
 
-console.log(DIARY.length);
+//console.log(DIARY.length);
 //creates table to equate correlation
 function tableFor(food, sick){
   var table=[1,1,1,1];
@@ -69,7 +76,7 @@ function tableFor(food, sick){
   }
   return table;
 }
-  console.log(tableFor("cheese", "headache", DIARY));
+  //console.log(tableFor("cheese", "headache", DIARY));
 
   var symptomArray = [];
   //creates an array of all logged symptoms
@@ -87,7 +94,7 @@ function tableFor(food, sick){
     $.each(sickArray, function(p, unique){
         if($.inArray(unique, symptomArray) === -1) symptomArray.push(unique);
     });
-    console.log(symptomArray);
+    //console.log(symptomArray);
   }
 
   gatherSymp();
@@ -106,12 +113,12 @@ function tableFor(food, sick){
     $.each(foodArray, function(p, unique){
         if($.inArray(unique, ingredArray) === -1) ingredArray.push(unique);
     });
-    console.log(ingredArray);
+    //console.log(ingredArray);
   }
 
   gatherIngred();
 
-
+  // maps all correlations to food item, under a category of symptom
   var corMap = {};
   var cleanLine = [];
   var cleanArray = [];
@@ -136,7 +143,7 @@ function tableFor(food, sick){
       var totalTemps = tempArray
       corMap[symptomArray[t]] = totalTemps;
     }
-    console.log(corMap);
+    //console.log(corMap);
     for(p=0;p<symptomArray.length;p++){
       var totalLine = "";
       var corName = symptomArray[p];
@@ -145,11 +152,11 @@ function tableFor(food, sick){
       }
       cleanLine.push(totalLine)
     }
-    console.log(cleanLine);
+    //console.log(cleanLine);
 }
   corMapper();
 
-
+  // appends children to display correlations
   function displayCorrelations(){
       var $corsLayout = document.getElementById('allCorrelations');
       for (h=0;h<symptomArray.length;h++){

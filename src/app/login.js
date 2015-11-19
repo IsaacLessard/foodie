@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  // IN THIS CODE, ALL SINGLE LETTERS REPRESENT A COUNTER/INDEX
+
   $('#logIn').click(function(){
     console.log("clicked!");
     $('.logIn').toggleClass('display');

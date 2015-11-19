@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
 
+    // IN THIS CODE, ALL SINGLE LETTERS REPRESENT A COUNTER/INDEX
+
     var $historyLayout = document.getElementById('historyDisplay');
     var $diary = JSON.parse(localStorage.getItem('diary'));
 
