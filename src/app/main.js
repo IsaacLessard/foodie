@@ -24,6 +24,7 @@ function addEntry(){
     ingredients: $ingredients
   });
   saveDiary();
+  setDiary();
   console.log(JSON.parse(localStorage.getItem('diary')));
 }
 
@@ -32,6 +33,7 @@ function addSickness(){
   var $length = DIARY.length - 1;
   DIARY[$length].symptoms = $symptoms;
   saveDiary();
+  setDiary();
   console.log(localStorage.getItem('diary'));
 }
 

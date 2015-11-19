@@ -18,12 +18,14 @@ FOODIE STYLINGS
 
 .recipeShow {
   padding: 1em;
-  width: 15vw; }
+  width: 15vw;
+  display: flex;
+  flex-wrap: wrap; }
   .recipeShow img {
     width: 100%; }
 
 .journalItem {
-  padding: 1em;
+  padding-left: 1em;
   width: 15vw; }
 
 .nextBtn {
