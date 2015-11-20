@@ -34,6 +34,10 @@ function addEntry(){
   saveDiary();
   setDiary();
   //console.log(JSON.parse(localStorage.getItem('diary')));
+  var $entryMadeTell = document.createElement('div');
+  var $entryMadeLayout = document.getElementById('entryMade');
+  $entryMadeTell.innerHTML = "<h2>Entry "+ DIARY.length + " made</h2>";
+  $entryMadeLayout.appendChild($entryMadeTell);
 }
 
 //adds symptom to most recent diary entry

@@ -49,17 +49,18 @@ var $diary = JSON.parse(localStorage.getItem('diary'));
         $entryItem.innerHTML = "<div class='journalItem'><h3>Entry "+ i +"</h3><h2>"+$name+"</h2><p>"+$ingred+"</p>"+"<h3>Symptoms</h3><p>"+$sicks+"</p>";
         $historyLayout.appendChild($entryItem);
         }
+
       }
 
-    console.log($diary.length);
+    //console.log($diary.length);
 
     //shows all entries of diary. For demonstration purposes, no limit is placed on how much is displayed
     function displayDiary(){
       clearHistory();
       $diary = JSON.parse(localStorage.getItem('diary'));
-      console.log("display called", $diary);
+      //console.log("display called", $diary);
       if($diary.length > 0){
-        console.log($diary)
+        //console.log($diary)
         for(i=0;i<$diary.length;i++){
 
           entryFound();
@@ -99,21 +100,22 @@ var $diary = JSON.parse(localStorage.getItem('diary'));
       $('.entry').addClass('display');
 
       $('#entry').click(function(){
-         console.log("clicked!");
+         //console.log("clicked!");
         $('.entry').addClass('display');
         $('.recipes').removeClass('display');
         $('.diary').removeClass('display');
+        $('#entryMade').html('');
       });
 
       $('#recipes').click(function(){
-        console.log("clicked!");
+        //console.log("clicked!");
         $('.recipes').addClass('display');
         $('.entry').removeClass('display');
         $('.diary').removeClass('display');
       });
 
       $('#diary').click(function(){
-        console.log("clicked!");
+        //console.log("clicked!");
         $('.diary').addClass('display');
         $('.recipes').removeClass('display');
         $('.entry').removeClass('display');
