@@ -4,7 +4,7 @@ $(document).ready(function(){
   // IN THIS CODE, ALL SINGLE LETTERS REPRESENT A COUNTER/INDEX
 
   //API url
-  var $urlBase = "http://www.recipepuppy.com/api/?p=";
+  var $urlBase = "http://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?p=";
   var $pageIndex = 1;
 
 // increases page number on api call
