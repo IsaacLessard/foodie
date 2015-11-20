@@ -1,9 +1,13 @@
 #FIARY
 ## A web app
 ```
-FIARY is a web app that combines a food diary with a a health tracker. By inputing each meal, its ingredients, and when you get sick, FIARY helps by computing which ingredients most often get sick after eating. This helps with finding food allergies, helping maintain a stable diet, and overall health tracking. One can also use this to track their children's health, or measure how health fluctuates on a highly restrictive diet.
+- FIARY is a web app that combines a food diary with a a health tracker. 
+- By inputing each meal, its ingredients, and when you get sick, FIARY helps by computing which ingredients most often get sick after eating. 
+- This helps with finding food allergies, helping maintain a stable diet, and overall health tracking. 
+- One can also use this to track their children's health, or measure how health fluctuates on a highly restrictive diet.
 
-FIARY combines three main functions - the diary for recording meals, the ability to correlate symptoms with actual ingredients, and the ability to search for recipes. These combine to help facilitate a user to move towards optimal health.
+- FIARY combines three main functions - the diary for recording meals, the ability to correlate symptoms with actual ingredients, and the ability to search for recipes. 
+- These combine to help facilitate a user to move towards optimal health.
 ```
 
 ##This app was built with
