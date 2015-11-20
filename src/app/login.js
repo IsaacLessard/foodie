@@ -45,6 +45,9 @@ $(document).ready(function(){
     //creates new diary
     var DIARY = [];
     localStorage.setItem('diary',JSON.stringify(DIARY));
+    //switches to log in
+    $('.logIn').addClass('display');
+    $('.signUp').removeClass('display');
   }
 
   //click event for signing up

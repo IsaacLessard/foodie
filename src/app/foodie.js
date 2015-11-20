@@ -4,7 +4,7 @@ $(document).ready(function(){
     // IN THIS CODE, ALL SINGLE LETTERS REPRESENT A COUNTER/INDEX
 
     var $historyLayout = document.getElementById('historyDisplay');
-    var $diary = JSON.parse(localStorage.getItem('diary'));
+var $diary = JSON.parse(localStorage.getItem('diary'));
 
     //console.log($diary);
     //console.log($diary.length);
@@ -27,6 +27,8 @@ $(document).ready(function(){
 
 
     function entryFound(){
+        setDiary();
+        $diary = JSON.parse(localStorage.getItem('diary'));
         var $entryItem = document.createElement('li');
         var $name = $diary[i].name;
         var $ingred = "";
@@ -54,14 +56,18 @@ $(document).ready(function(){
     //shows all entries of diary. For demonstration purposes, no limit is placed on how much is displayed
     function displayDiary(){
       clearHistory();
-        if($diary.length > 0){
-          for(i=0;i<$diary.length;i++){
-            entryFound();
-            }
-        } else if($diary.length < 1){
-          var $nullWord = document.createElement('li');
-          $nullWord.innerHTML = "<h3>You have no entries. Click on 'ENTRY' to create one!</h3>"
-          $historyLayout.appendChild($nullWord);
+      $diary = JSON.parse(localStorage.getItem('diary'));
+      console.log("display called", $diary);
+      if($diary.length > 0){
+        console.log($diary)
+        for(i=0;i<$diary.length;i++){
+
+          entryFound();
+          }
+      } else if($diary.length < 1){
+        var $nullWord = document.createElement('li');
+        $nullWord.innerHTML = "<h3>You have no entries. Click on 'ENTRY' to create one!</h3>"
+        $historyLayout.appendChild($nullWord);
         }
       }
 
@@ -80,11 +86,11 @@ $(document).ready(function(){
           if ($diary[i].name == searchDiaryItem){
             entryFound();
           }
-          else if ($historyLayout.innerHTML === ""){
-            var $nullWord = document.createElement('li');
-            $nullWord.innerHTML = "<h3>No entries found.</h3>"
-            $historyLayout.appendChild($nullWord);
-          }
+        }
+        if ($historyLayout.innerHTML === ""){
+          var $nullWord = document.createElement('li');
+          $nullWord.innerHTML = "<h3>No entries found.</h3>"
+          $historyLayout.appendChild($nullWord);
         }
       }
 
