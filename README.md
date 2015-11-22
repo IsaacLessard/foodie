@@ -42,3 +42,5 @@ From the front page, click sign up. After creating your username and password, l
 ```
 - to view correlations, the page needs to be refreshed and then re-navigated to 'stats'
 ```
+
+
